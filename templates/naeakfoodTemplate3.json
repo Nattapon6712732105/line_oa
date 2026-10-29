@@ -1,0 +1,63 @@
+{
+  "size": {
+    "width": 2500,
+    "height": 1686
+  },
+  "selected": true,
+  "name": "naeakfood_official_menu",
+  "chatBarText": "เปิดเมนูอาหาร",
+  "areas": [
+    {
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 2500,
+        "height": 840
+      },
+      "action": {
+        "type": "message",
+        "label": "เมนู & สั่งอาหาร",
+        "text": "เมนูและสั่งอาหาร"
+      }
+    },
+    {
+      "bounds": {
+        "x": 0,
+        "y": 840,
+        "width": 833,
+        "height": 846
+      },
+      "action": {
+        "type": "message",
+        "label": "โปรโมชั่น",
+        "text": "โปรโมชั่น"
+      }
+    },
+    {
+      "bounds": {
+        "x": 833,
+        "y": 840,
+        "width": 834,
+        "height": 846
+      },
+      "action": {
+        "type": "message",
+        "label": "สะสมแต้ม",
+        "text": "สะสมแต้ม"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1667,
+        "y": 840,
+        "width": 833,
+        "height": 846
+      },
+      "action": {
+        "type": "uri",
+        "label": "ข้อมูล & ติดต่อ",
+        "uri": "https://www.facebook.com/bcomputer45/"
+      }
+    }
+  ]
+}

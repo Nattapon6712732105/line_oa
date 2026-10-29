@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>NaEak food - โปรโมชั่น & บัตรสะสมแต้ม</title>
+  <meta name="description" content="สิทธิพิเศษ โปรโมชั่นส่วนลด และบัตรสะสมแต้มดิจิทัลสำหรับลูกค้า NaEak food">
+  <meta property="og:title" content="NaEak food - โปรโมชั่น & บัตรสะสมแต้ม">
+  <meta property="og:description" content="รับส่วนลด 10% โค้ด NAEAK10 และสะสมแต้มแลกอาหารฟรี!">
+  <meta property="og:image" content="assets/logo.jpg">
+  
+  <!-- Google Fonts: Prompt & Kanit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header with Shop Branding -->
+    <header class="app-header">
+      <div class="brand-bar">
+        <div class="logo-wrapper">
+          <img src="assets/logo.jpg" alt="NaEak food Logo" class="brand-logo" id="brand-logo">
+        </div>
+        <div class="brand-info">
+          <h1 class="brand-name">NaEak food</h1>
+          <p class="brand-subtitle">รสชาติต้นตำรับ อบอุ่นทุกจาน 🍲✨</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs (Hash-linked) -->
+      <nav class="tab-nav" id="tab-nav">
+        <button class="tab-btn active" id="tab-btn-promo" onclick="switchTab('promo')">
+          <span class="tab-icon">🎟️</span>
+          <span class="tab-text">โปรโมชั่น & คูปอง</span>
+        </button>
+        <button class="tab-btn" id="tab-btn-rewards" onclick="switchTab('rewards')">
+          <span class="tab-icon">⭐</span>
+          <span class="tab-text">บัตรสะสมแต้ม</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- ==================== TAB 1: PROMOTIONS ==================== -->
+      <section id="section-promo" class="tab-section active">
+        <!-- Hero Welcome Coupon -->
+        <div class="coupon-hero-card">
+          <div class="coupon-badge">🎁 สิทธิพิเศษเพื่อนใหม่</div>
+          <div class="coupon-discount-box">
+            <span class="discount-num">10%</span>
+            <span class="discount-unit">OFF</span>
+          </div>
+          <h2 class="coupon-title">ส่วนลดต้อนรับสมาชิกใหม่</h2>
+          <p class="coupon-desc">ลดทันที 10% ทุกเมนู สำหรับการสั่งซื้อครั้งแรกผ่าน LINE</p>
+          
+          <div class="code-copy-container">
+            <div class="code-box">
+              <span class="code-label">โค้ดส่วนลด:</span>
+              <span class="code-text" id="promo-code">NAEAK10</span>
+            </div>
+            <button class="btn-copy" id="btn-copy-code" onclick="copyCode('NAEAK10')">
+              <span class="copy-icon">📋</span> คัดลอก
+            </button>
+          </div>
+          <p class="coupon-validity">*เงื่อนไข: ใช้ได้ 1 สิทธิ์/ท่าน ถึง 31 ธ.ค. 2026</p>
+        </div>
+
+        <!-- Section Title -->
+        <div class="section-heading">
+          <h3>🔥 ดีลพิเศษประจำเดือน</h3>
+          <span class="heading-line"></span>
+        </div>
+
+        <!-- Promo List -->
+        <div class="promo-grid">
+          <!-- Card 1: Free Delivery -->
+          <article class="promo-card">
+            <div class="promo-icon-circle green">🛵</div>
+            <div class="promo-details">
+              <h4>ส่งฟรีในระยะ 5 กม.</h4>
+              <p>เมื่อสั่งอาหารครบ 300 บาทขึ้นไป จัดส่งถึงหน้าบ้านทันที</p>
+              <span class="promo-tag">คุ้มสุดๆ</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Set Menu Deal -->
+          <article class="promo-card">
+            <div class="promo-icon-circle orange">🍱</div>
+            <div class="promo-details">
+              <h4>เซ็ตราเมน + ชาเขียวเย็น</h4>
+              <p>จับคู่ราเมนซิกเนเจอร์กับชาเขียวสูตรพิเศษ ราคาเพียง 179.- (ปกติ 209.-)</p>
+              <span class="promo-tag">Signature Deal</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Weekend Treats -->
+          <article class="promo-card">
+            <div class="promo-icon-circle purple">🍤</div>
+            <div class="promo-details">
+              <h4>สั่งครบ 500.- แถมฟรีของทานเล่น</h4>
+              <p>รับฟรีกุ้งเทมปุระหรือเกี๊ยวซ่ากรอบ 1 จาน ทุกวันเสาร์-อาทิตย์</p>
+              <span class="promo-tag">Weekend Special</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-box">
+          <p>อยากทานเมนูไหน สั่งกับแอดมินใน LINE ได้เลย!</p>
+          <a href="https://line.me/R/ti/p/@762sdfbp" class="btn-primary" id="btn-order-line">
+            <span>🍲</span> สั่งอาหารผ่าน LINE
+          </a>
+        </div>
+      </section>
+
+
+      <!-- ==================== TAB 2: REWARDS / STAMP CARD ==================== -->
+      <section id="section-rewards" class="tab-section">
+        <!-- Digital Stamp Card Box -->
+        <div class="stamp-card-container">
+          <div class="stamp-card-header">
+            <div class="stamp-card-title">
+              <span class="card-logo-mini">🐶</span>
+              <div>
+                <h2>NaEak Stamp Card</h2>
+                <p>บัตรสะสมแต้มดิจิทัล</p>
+              </div>
+            </div>
+            <div class="stamp-current-count">
+              <span class="count-num" id="display-stamps">3</span>
+              <span class="count-max">/10 แต้ม</span>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-fill" style="width: 30%;"></div>
+          </div>
+
+          <!-- 10 Stamp Grid -->
+          <div class="stamps-grid" id="stamps-grid">
+            <!-- Will be rendered by JavaScript -->
+          </div>
+
+          <div class="stamp-card-footer">
+            <p>💡 สั่งครบทุก 100.- รับทันที 1 สแตมป์</p>
+          </div>
+        </div>
+
+        <!-- Phone Lookup Check -->
+        <div class="phone-check-box">
+          <h3>📱 ตรวจสอบแต้มสะสมของคุณ</h3>
+          <p>กรอกเบอร์โทรศัพท์ที่ใช้สั่งอาหารเพื่อดูแต้มสะสมล่าสุด</p>
+          <div class="search-input-group">
+            <input type="tel" id="input-phone" placeholder="เช่น 0812345678" maxlength="10">
+            <button class="btn-check" id="btn-check-points" onclick="checkPoints()">ตรวจสอบ</button>
+          </div>
+          <div id="check-result" class="check-result"></div>
+        </div>
+
+        <!-- Reward Tiers -->
+        <div class="section-heading">
+          <h3>🎁 รางวัลแลกรับสิทธิ์</h3>
+          <span class="heading-line"></span>
+        </div>
+
+        <div class="rewards-tiers">
+          <div class="tier-card active">
+            <div class="tier-badge">5 แต้ม</div>
+            <div class="tier-content">
+              <h4>ฟรี! เครื่องดื่มเย็น 1 แก้ว 🥤</h4>
+              <p>เลือกได้ระหว่าง ชาเขียวญี่ปุ่น, ชามะนาว หรือน้ำผลไม้</p>
+            </div>
+          </div>
+
+          <div class="tier-card gold">
+            <div class="tier-badge">10 แต้ม</div>
+            <div class="tier-content">
+              <h4>ฟรี! เมนูอาหารจานโปรด 1 จาน 🍲</h4>
+              <p>เลือกรับราเมนซิกเนเจอร์ หรือ ข้าวหน้าหมูทงคัตสึ ฟรีทันที</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to get points -->
+        <div class="how-to-box">
+          <h4>📌 วิธีสะสมแต้มง่ายๆ:</h4>
+          <ol>
+            <li>สั่งซื้ออาหารผ่าน LINE หรือหน้าร้าน</li>
+            <li>แจ้งเบอร์โทรศัพท์กับแอดมินตอนชำระเงิน</li>
+            <li>ระบบจะบันทึกแต้มให้ทันที เมื่อครบตามกำหนดกดแลกรับของรางวัลได้เลย!</li>
+          </ol>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- App Footer -->
+    <footer class="app-footer">
+      <p class="footer-brand">NaEak food (ณ เอก ฟู้ด)</p>
+      <p class="footer-hours">⏰ เปิดบริการทุกวัน 10:00 - 21:00 น.</p>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/bcomputer45/" target="_blank" class="footer-btn fb" id="footer-fb-link">
+          <span>📘</span> Facebook Page
+        </a>
+        <a href="https://line.me/R/ti/p/@762sdfbp" class="footer-btn line" id="footer-line-link">
+          <span>💬</span> แชทกับแอดมิน
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 NaEak food. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">คัดลอกโค้ดสำเร็จ! นำไปใช้ใน LINE ได้เลย 🍲</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

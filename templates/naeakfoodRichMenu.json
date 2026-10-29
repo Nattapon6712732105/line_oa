@@ -1,0 +1,89 @@
+{
+  "size": {
+    "width": 2500,
+    "height": 1686
+  },
+  "selected": true,
+  "name": "naeakfood_main_menu",
+  "chatBarText": "เปิดเมนูอาหาร",
+  "areas": [
+    {
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "เมนูอาหาร",
+        "text": "เมนูอาหาร"
+      }
+    },
+    {
+      "bounds": {
+        "x": 833,
+        "y": 0,
+        "width": 834,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "สั่งซื้อ / สั่งอาหาร",
+        "text": "สั่งซื้อสินค้า"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1667,
+        "y": 0,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "โปรโมชัน / คูปอง",
+        "text": "โปรโมชันและคูปองส่วนลด"
+      }
+    },
+    {
+      "bounds": {
+        "x": 0,
+        "y": 843,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "เวลา & พิกัดร้าน",
+        "text": "เวลาเปิด-ปิด และพิกัดร้าน"
+      }
+    },
+    {
+      "bounds": {
+        "x": 833,
+        "y": 843,
+        "width": 834,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "บัตรสะสมแต้ม",
+        "text": "บัตรสะสมแต้ม"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1667,
+        "y": 843,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "uri",
+        "label": "ติดต่อแอดมิน",
+        "uri": "https://www.facebook.com/bcomputer45/"
+      }
+    }
+  ]
+}

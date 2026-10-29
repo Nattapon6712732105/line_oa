@@ -1,0 +1,29 @@
+{
+  "name": "line_oa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "check": "node src/checkConnection.js",
+    "generate-images": "node assets/generateSampleImages.js",
+    "create-menu": "node src/createRichMenu.js",
+    "create-menu:default": "node src/createRichMenu.js --default",
+    "create-menu:compact": "node src/createRichMenu.js --compact --default",
+    "create-naeakfood": "node src/createRichMenu.js --naeakfood --default",
+    "create-template3": "node src/createRichMenu.js --template3 --default",
+    "list-menus": "node src/listRichMenus.js",
+    "set-default": "node src/setDefaultRichMenu.js",
+    "delete-menu": "node src/deleteRichMenu.js",
+    "delete-all": "node src/deleteRichMenu.js --all",
+    "link-user": "node src/linkUserRichMenu.js",
+    "deploy": "npx vercel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@line/bot-sdk": "^11.0.0",
+    "dotenv": "^18.0.9",
+    "sharp": "^0.35.5"
+  }
+}

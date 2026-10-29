@@ -1,0 +1,89 @@
+{
+  "size": {
+    "width": 2500,
+    "height": 1686
+  },
+  "selected": true,
+  "name": "Main Rich Menu (6 Buttons)",
+  "chatBarText": "เปิดเมนูหลัก",
+  "areas": [
+    {
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "โปรโมชั่น",
+        "text": "ดูโปรโมชั่นล่าสุด"
+      }
+    },
+    {
+      "bounds": {
+        "x": 833,
+        "y": 0,
+        "width": 834,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "สินค้าทั้งหมด",
+        "text": "ดูรายการสินค้า"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1667,
+        "y": 0,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "uri",
+        "label": "เว็บไซต์",
+        "uri": "https://line.me"
+      }
+    },
+    {
+      "bounds": {
+        "x": 0,
+        "y": 843,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "สะสมแต้ม",
+        "text": "เช็คแต้มสะสม"
+      }
+    },
+    {
+      "bounds": {
+        "x": 833,
+        "y": 843,
+        "width": 834,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "ติดต่อเจ้าหน้าที่",
+        "text": "ติดต่อแอดมิน"
+      }
+    },
+    {
+      "bounds": {
+        "x": 1667,
+        "y": 843,
+        "width": 833,
+        "height": 843
+      },
+      "action": {
+        "type": "message",
+        "label": "คำถามที่พบบ่อย",
+        "text": "คำถามที่พบบ่อย (FAQ)"
+      }
+    }
+  ]
+}
