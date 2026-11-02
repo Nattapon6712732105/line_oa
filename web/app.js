@@ -134,3 +134,12 @@ window.addEventListener('DOMContentLoaded', () => {
     switchTab('promo');
   }
 });
+
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash.toLowerCase();
+  if (hash === '#rewards' || hash === '#reward' || hash === '#stamp' || hash === '#points') {
+    switchTab('rewards');
+  } else {
+    switchTab('promo');
+  }
+});

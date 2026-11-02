@@ -28,9 +28,9 @@
         "height": 846
       },
       "action": {
-        "type": "message",
+        "type": "uri",
         "label": "โปรโมชั่น",
-        "text": "โปรโมชั่น"
+        "uri": "https://naeakfood.vercel.app/#promo"
       }
     },
     {
@@ -41,9 +41,9 @@
         "height": 846
       },
       "action": {
-        "type": "message",
+        "type": "uri",
         "label": "สะสมแต้ม",
-        "text": "สะสมแต้ม"
+        "uri": "https://naeakfood.vercel.app/#rewards"
       }
     },
     {

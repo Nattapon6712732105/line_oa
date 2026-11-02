@@ -13,3 +13,4 @@ yarn-error.log*
 Thumbs.db
 last_rich_menu_id.txt
 .vercel/
+.vercel
