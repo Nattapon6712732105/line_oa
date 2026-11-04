@@ -41,9 +41,9 @@
         "height": 843
       },
       "action": {
-        "type": "message",
-        "label": "โปรโมชัน / คูปอง",
-        "text": "โปรโมชันและคูปองส่วนลด"
+        "type": "uri",
+        "label": "โปรโมชั่น & คูปอง",
+        "uri": "https://naeakfood.vercel.app/#promo"
       }
     },
     {
@@ -67,9 +67,9 @@
         "height": 843
       },
       "action": {
-        "type": "message",
-        "label": "บัตรสะสมแต้ม",
-        "text": "บัตรสะสมแต้ม"
+        "type": "uri",
+        "label": "บัตรสะสมแต้ม 20 แต้ม",
+        "uri": "https://naeakfood.vercel.app/#rewards"
       }
     },
     {

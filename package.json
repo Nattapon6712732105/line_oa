@@ -5,6 +5,7 @@
   "scripts": {
     "check": "node src/checkConnection.js",
     "generate-images": "node assets/generateSampleImages.js",
+    "generate-template3": "node assets/generateTemplate3Image.js",
     "generate-rewards": "node assets/generateLoyaltyAndCouponImages.js",
     "create-menu": "node src/createRichMenu.js",
     "create-menu:default": "node src/createRichMenu.js --default",
