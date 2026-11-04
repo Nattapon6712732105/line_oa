@@ -2,8 +2,8 @@
 // NaEak food - Interactive Logic for Promotions & Stamp Card
 // ==========================================================================
 
-let currentStamps = 3;
-const maxStamps = 10;
+let currentStamps = 5;
+const maxStamps = 20;
 
 // Switch Tab function
 function switchTab(tab) {
@@ -60,7 +60,7 @@ function showToast() {
   }, 2500);
 }
 
-// Render 10 Stamp Card Slots
+// Render 20 Stamp Card Slots
 function renderStamps(count) {
   const grid = document.getElementById('stamps-grid');
   grid.innerHTML = '';
@@ -69,22 +69,30 @@ function renderStamps(count) {
     const slot = document.createElement('div');
     slot.className = 'stamp-slot';
 
-    if (i === 5 || i === 10) {
+    if (i === 5 || i === 10 || i === 15 || i === 20) {
       slot.classList.add('reward-slot');
     }
 
     if (i <= count) {
       slot.classList.add('stamped');
-      if (i === 10) {
+      if (i === 20) {
         slot.innerHTML = '<span class="stamp-icon">🏆</span>';
+      } else if (i === 15) {
+        slot.innerHTML = '<span class="stamp-icon">🍟</span>';
+      } else if (i === 10) {
+        slot.innerHTML = '<span class="stamp-icon">🥟</span>';
       } else if (i === 5) {
         slot.innerHTML = '<span class="stamp-icon">🥤</span>';
       } else {
         slot.innerHTML = '<span class="stamp-icon">⭐</span>';
       }
     } else {
-      if (i === 10) {
+      if (i === 20) {
         slot.innerHTML = '<span class="stamp-icon" style="font-size:16px;">🎁</span><span class="stamp-num">ฟรีอาหาร</span>';
+      } else if (i === 15) {
+        slot.innerHTML = '<span class="stamp-icon" style="font-size:16px;">🍟</span><span class="stamp-num">ฟรีของกิน</span>';
+      } else if (i === 10) {
+        slot.innerHTML = '<span class="stamp-icon" style="font-size:16px;">🥟</span><span class="stamp-num">ทานเล่น</span>';
       } else if (i === 5) {
         slot.innerHTML = '<span class="stamp-icon" style="font-size:16px;">🥤</span><span class="stamp-num">ฟรีน้ำ</span>';
       } else {
@@ -113,14 +121,14 @@ function checkPoints() {
   }
 
   // Consistent demo point generator based on phone last digit
-  const lastDigit = parseInt(phone.slice(-1), 10) || 3;
-  const calculatedPoints = Math.min(10, Math.max(1, lastDigit));
+  const lastDigit = parseInt(phone.slice(-1), 10) || 4;
+  const calculatedPoints = Math.min(20, Math.max(1, lastDigit * 2));
 
   currentStamps = calculatedPoints;
   renderStamps(currentStamps);
 
   result.className = 'check-result success';
-  result.innerHTML = `✅ เบอร์ ${phone.slice(0, 3)}-xxx-${phone.slice(-4)} มีแต้มสะสม: <strong>${currentStamps} แต้ม</strong> (${10 - currentStamps > 0 ? `อีกเพียง ${10 - currentStamps} แต้มจะได้รับอาหารฟรี 1 จาน!` : 'คุณมีสิทธิ์แลกรับอาหารฟรีแล้ว!'})`;
+  result.innerHTML = `✅ เบอร์ ${phone.slice(0, 3)}-xxx-${phone.slice(-4)} มีแต้มสะสม: <strong>${currentStamps} แต้ม</strong> (${20 - currentStamps > 0 ? `อีกเพียง ${20 - currentStamps} แต้มจะได้รับอาหารฟรี 1 จาน!` : 'คุณมีสิทธิ์แลกรับอาหารฟรีแล้ว!'})`;
 }
 
 // Auto detect Hash on load
